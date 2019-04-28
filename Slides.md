@@ -12,7 +12,7 @@ Go with net, net/http and a few helper packages.
 
 # Outline
 
-## Lookups and TCP servers (5)
+## Lookups and TCP servers
 
 * Basics: IP addresses, masks (ipaddr, ipmask)
 * Lookups: Hosts, name resolution (lookuphost, lookupport)
@@ -20,7 +20,7 @@ Go with net, net/http and a few helper packages.
 * Daytime: A daytime server (daytime, daytimei)
 * Echo: An echoserver, single and multi-threaded (*)
 
-## Fetching data (5)
+## Fetching data
 
 * Fetching HTTP: basics, creating requests (furl1)
 * http.Response (httpresponse)
@@ -29,11 +29,11 @@ Go with net, net/http and a few helper packages.
 * Fetch URLs in parallel with goroutines (*)
 * Fetching URLs in parallel (furl4)
 
-## Go in a Container (1)
+## Go in a Container
 
 * Fetch FROM SCRATCH: putting Go into a Container (fromscratch)
 
-## Web applications (13)
+## Web applications
 
 * HelloWorld (helloworld)
 * Handlers (handlers)
@@ -46,11 +46,11 @@ Go with net, net/http and a few helper packages.
 * TLS (tls)
 * testing (responserecorder)
 
-## Web Framework (2)
+## Web Framework
 
 * gorilla/mux (gorillamux)
 * struct handler (groupstruct)
 
-## Proxy example (1)
+## Proxy example
 
 * Minimal HTTP proxy example (httpproxy)
