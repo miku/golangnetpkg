@@ -45,6 +45,7 @@ Go with net, net/http and a few helper packages.
 * Serializing Data (servejson)
 * TLS (tls)
 * testing (responserecorder)
+* a small web server (*)
 
 ## Web Framework
 

@@ -22,8 +22,10 @@ func main() {
 		fmt.Fprintf(os.Stderr, "usage: %s IP\n", os.Args[0])
 		os.Exit(1)
 	}
+
 	name := os.Args[1]
 	addr := net.ParseIP(name)
+
 	if addr == nil {
 		fmt.Printf("invalid address: %s\n", name)
 	} else {
