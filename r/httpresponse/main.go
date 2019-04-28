@@ -15,7 +15,7 @@ func main() {
 	}
 	defer resp.Body.Close()
 	log.Printf("StatusCode=%v\n", resp.StatusCode)
-	log.Printf("Uncompressed=%v\n", resp.Uncompressed)
+	log.Printf("Proto=%v", resp.Proto)
 	resp.Header.Write(os.Stderr)
 
 	if _, err := io.Copy(os.Stdout, resp.Body); err != nil {
