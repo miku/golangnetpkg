@@ -47,6 +47,8 @@ Go with net, net/http and a few helper packages.
 * testing (responserecorder)
 * a small web server (*)
 
+Example web apps: [wiki](https://golang.org/doc/articles/wiki/), [dvmweb](https://github.com/miku/dvmweb)
+
 ## Web Framework
 
 * gorilla/mux (gorillamux)
