@@ -26,7 +26,8 @@ Go with net, net/http and a few helper packages.
 * http.Response (httpresponse)
 * DumpResponse (dumpresponse)
 * A sequential link checker (furl2, furl3)
-* Fetching data in parallel (furl4)
+* Fetch URLs in parallel with goroutines (*)
+* Fetching URLs in parallel (furl4)
 
 ## Go in a Container (1)
 
