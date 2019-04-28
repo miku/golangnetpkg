@@ -7,6 +7,10 @@ import (
 )
 
 func handleClient(conn net.Conn) {
+	defer func() {
+		log.Println("connection closed")
+		conn.Close()
+	}()
 	if _, err := io.Copy(conn, conn); err != nil {
 		log.Fatal(err)
 	}
@@ -25,7 +29,6 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		handleClient(conn)
-		conn.Close()
+		go handleClient(conn)
 	}
 }

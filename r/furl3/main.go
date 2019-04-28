@@ -12,7 +12,7 @@ import (
 )
 
 type result struct {
-	Link       string `json:"link,omitempty"`
+	Link       string `json:"URL,omitempty"`
 	StatusCode int    `json:"code,omitempty"`
 	Error      error  `json:"error,omitempty"`
 }

@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+	// /etc/services
 	port, err := net.LookupPort("tcp", "git")
 	if err != nil {
 		log.Fatal(err)

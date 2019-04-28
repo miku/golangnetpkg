@@ -14,11 +14,10 @@ package main
 
 import (
 	"flag"
-	"fmt"
 	"io"
-	"io/ioutil"
 	"log"
 	"net"
+	"os"
 )
 
 func main() {
@@ -38,12 +37,12 @@ func main() {
 	if _, err := io.WriteString(conn, "HEAD / HTTP/1.0\r\n\r\n"); err != nil {
 		log.Fatal(err)
 	}
-	b, err := ioutil.ReadAll(conn)
-	if err != nil {
+	//b, err := ioutil.ReadAll(conn)
+	//if err != nil {
+	//	log.Fatal(err)
+	//}
+	if _, err := io.Copy(os.Stdout, conn); err != nil {
 		log.Fatal(err)
 	}
-	// if _, err := io.Copy(os.Stdout, conn); err != nil {
-	//	log.Fatal(err)
-	// }
-	fmt.Println(string(b))
+	// fmt.Println(string(b))
 }

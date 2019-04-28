@@ -9,11 +9,12 @@ import (
 )
 
 func main() {
-	resp, err := http.Get("http://devopenspace.de")
+	resp, err := http.Get("http://spartakiade.org")
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer resp.Body.Close()
+
 	log.Printf("StatusCode=%v\n", resp.StatusCode)
 	log.Printf("Proto=%v", resp.Proto)
 	resp.Header.Write(os.Stderr)

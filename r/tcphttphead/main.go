@@ -40,7 +40,8 @@ func main() {
 	// HTTP/1.1 would require the Host header to be set,
 	// https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Host.
 	if _, err := io.WriteString(conn, "HEAD / HTTP/1.0\r\n\r\n"); err != nil {
-		log.Fatal(err)
+		log.Fatal(err) // log.Println(err); os.Exit(1)
+
 	}
 	b, err := ioutil.ReadAll(conn)
 	if err != nil {

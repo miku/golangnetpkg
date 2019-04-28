@@ -8,7 +8,7 @@ import (
 func handleClient(conn net.Conn) {
 	var buf [512]byte
 	for {
-		n, err := conn.Read(buf[0:])
+		n, err := conn.Read(buf[:])
 		if err != nil {
 			log.Println(err)
 			return

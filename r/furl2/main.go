@@ -7,10 +7,12 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"runtime"
 	"strings"
 )
 
 func main() {
+
 	f, err := os.Open("small.txt")
 	if err != nil {
 		log.Fatal(err)

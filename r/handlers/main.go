@@ -12,6 +12,7 @@ func (app app) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	http.Handle("/", app{}) // https://golang.org/pkg/net/http/#Handler
+	app := app{}
+	http.Handle("/", app) // https://golang.org/pkg/net/http/#Handler
 	http.ListenAndServe(":8080", nil)
 }

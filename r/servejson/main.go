@@ -13,7 +13,10 @@ type hello struct {
 }
 
 func main() {
-	payload := hello{Name: "World", Date: time.Now()}
+	payload := hello{
+		Name: "World",
+		Date: time.Now(),
+	}
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")

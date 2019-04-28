@@ -9,6 +9,8 @@ import (
 
 func main() {
 	hostport := "127.0.0.1:1200"
+	log.Println(hostport)
+
 	listener, err := net.Listen("tcp", hostport)
 	if err != nil {
 		log.Fatal(err)
