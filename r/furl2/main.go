@@ -25,18 +25,18 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		link := strings.TrimSpace(line)
+		url := strings.TrimSpace(line)
 
-		resp, err := http.Get(link)
+		resp, err := http.Get(url)
 		if err != nil {
-			log.Printf("failed %s: %s", link, err)
+			log.Printf("failed %s: %s", url, err)
 			continue
 		}
 		defer resp.Body.Close()
 		if resp.StatusCode < 400 {
-			log.Printf("ok[%d]: %s", resp.StatusCode, link)
+			log.Printf("ok[%d]: %s", resp.StatusCode, url)
 		} else {
-			log.Printf("failed[%d]: %s", resp.StatusCode, link)
+			log.Printf("failed[%d]: %s", resp.StatusCode, url)
 		}
 	}
 }
