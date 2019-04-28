@@ -15,7 +15,4 @@ func main() {
 		"https://www.amazon.com/",
 	}
 	// (1) Fetch all links
-	for _, link := range links {
-		go fetch(link)
-	}
 }
